@@ -41,3 +41,15 @@ else
 {
     Console.WriteLine("Você está muito abaixo do peso");
 }
+
+double pesoIdeal = 0.0;
+if (imc > 25)
+{
+    pesoIdeal = 24.9 * altura * altura;
+    Console.WriteLine("Para estar no peso normal é necessário emagrecer {0} kg", peso - pesoIdeal);
+}
+else if (imc < 18.5)
+{
+    pesoIdeal = 18.5 * altura * altura;
+    Console.WriteLine("Para estar no peso normal é necessário engordar {0} kg", pesoIdeal - peso);
+}
